@@ -1,22 +1,13 @@
-while True:
-        try:
-            n = int(input("Mount of numbers in array = "))
-            break
-        except ValueError:
-            print("ERROR PLEASE ENTER AN INTEGER")
-
-arr = [0]*n
-i=0
-while i<n:
-    while True:
-        try:
-            temp= int(input("Number "+str(i)+" = "))
-            break
-        except ValueError:
-            print("ERROR PLEASE ENTER AN INTEGER")
-    arr[i]=temp
-    i+=1
-print("Our array =",arr)
+def getNumber():     # inputing and ckecking number method
+     while type:
+         getTempNumber=input()                      # inputing
+         try:                                        # checking if all is right
+             getTempNumber=int(getTempNumber)
+         except ValueError:                          # checking if input is not a number
+             print('"'+  getTempNumber + '"' + ' - is not a right number')
+         else:                                       # if inputing is right so end method
+             break
+     return getTempNumber # returning our number 
 
 def move(numbers, k):
     result = []
@@ -34,16 +25,22 @@ def move(numbers, k):
             result.append(negative[neg])
             neg += 1
     return result
-        
-test = [-2,5,6,-3,-4,3,-1]
-print(test)
-print(move(test,2))
 
-while True:
-        try:
-            k = int(input("K = "))
-            break
-        except ValueError:
-            print("ERROR PLEASE ENTER AN INTEGER")
+print("Mount of numbers in array =")
+n = getNumber()
+arr = [0]*n
+i=0
+while i<n:
+    print("Number "+str(i+1)," = ")
+    temp = getNumber()
+    arr[i]=temp
+    i+=1
+print("Our array =",arr)
+     
+#test = [-2,5,6,-3,-4,3,-1]
+#print(test)
+#print(move(test,2))
 
+print("Inpur K =")
+k= getNumber()
 print(move(arr,k))
