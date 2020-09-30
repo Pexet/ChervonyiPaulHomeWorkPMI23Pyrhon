@@ -41,10 +41,8 @@ def binary_search(arr, find):
     print("Search in [", lowwer, "," , upper, "]","Midle element =",arr[midle])
     while arr[midle] != find and lowwer <= upper:
         if find > arr[midle]:
-            print("Im comparing ",find, " and ", arr[midle],"\nEneterd ",find," is bigger")
             lowwer = midle + 1
         else:
-            print("Im comparing",find, "and", arr[midle],"\nEneterd ",find,"is smaller")
             upper = midle - 1
         operations += 1
         midle = (lowwer + upper) // 2
