@@ -1,13 +1,13 @@
-def getNumber():     # inputing and ckecking number method
+def getNumber():
      while type:
-         getTempNumber=input()                      # inputing
-         try:                                        # checking if all is right
+         getTempNumber=input()
+         try:
              getTempNumber=int(getTempNumber)
-         except ValueError:                          # checking if input is not a number
+         except ValueError:
              print('"'+  getTempNumber + '"' + ' - is not a right number')
-         else:                                       # if inputing is right so end method
+         else:
              break
-     return getTempNumber # returning our number 
+     return getTempNumber
 
 def move(numbers, k):
     result = []
@@ -26,6 +26,40 @@ def move(numbers, k):
             neg += 1
     return result
 
+def oneTimeSort(arr, index_arr):
+    for i in range(0, len(arr)-1):
+        for j in range(0, len(arr)-(i+1)):
+            if arr[j]>arr[j+1]:
+                arr[j] , arr[j+1] = arr[j+1] , arr[j]
+                index_arr[j], index_arr[j+1] = index_arr[j+1], index_arr[j]
+
+def binary_search(arr, find):
+    operations = 1
+    lowwer = 0
+    midle = len(arr) // 2
+    upper = len(arr) - 1
+    print("Search in [", lowwer, "," , upper, "]","Midle element =",arr[midle])
+    while arr[midle] != find and lowwer <= upper:
+        if find > arr[midle]:
+            print("Im comparing ",find, " and ", arr[midle],"\nEneterd ",find," is bigger")
+            lowwer = midle + 1
+        else:
+            print("Im comparing",find, "and", arr[midle],"\nEneterd ",find,"is smaller")
+            upper = midle - 1
+        operations += 1
+        midle = (lowwer + upper) // 2
+        print("Search in[",lowwer,",",upper,"]","Midle element =",arr[midle])
+    print("Mount of operations = ", operations)
+    if lowwer > upper:
+        return -1
+    else:
+        return midle
+
+def sameElemetnOut(arr, arr_index, find):
+    for i in range(0, len(arr)-1, 1):
+        if arr[i]==find:
+            print("index of our K =", arr_index[i])
+
 print("Mount of numbers in array =")
 n = getNumber()
 arr = [0]*n
@@ -36,11 +70,20 @@ while i<n:
     arr[i]=temp
     i+=1
 print("Our array =",arr)
-     
-#test = [-2,5,6,-3,-4,3,-1]
-#print(test)
-#print(move(test,2))
 
 print("Inpur K =")
 k= getNumber()
-print(move(arr,k))
+arr = move(arr,k)
+print(arr)
+
+print("---------------------------Question #2 (Binary)----------------------------------")
+arr_index = []
+for i in range(0, len(arr)):
+    arr_index.append(i)
+
+oneTimeSort(arr, arr_index)
+
+print("Enter K which index will be showed = ")
+K= getNumber()
+mid = binary_search(arr, K)
+sameElemetnOut(arr, arr_index, K)
