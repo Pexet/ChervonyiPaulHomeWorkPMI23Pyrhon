@@ -2,44 +2,39 @@ import random
 
 print("-------------------QUESTION #1--------------------")
 
-#перевірка на правильність введення даних(чи користувач ввів потрібні для виконання програми умови)
-while True:
-      n = input("Enter mount of numbers(integer type) =")
-      try:
-            number_mounts = int(n)
-            break
-      except ValueError:
-            try:
-                  float(n)
-                  print("Entered number is float type. PLEASE ENTER CORRECT DATAS")
-            except ValueError:
-                  print("VALUE ERROR PLEASE ENTER CORRECT DATAS")
+def getNumber():     # inputing and ckecking number method
+     while type:
+         getTempNumber=input()                      # inputing
+         try:                                        # checking if all is right
+             getTempNumber=int(getTempNumber)
+         except ValueError:                          # checking if input is not a number
+             print('"'+  getTempNumber + '"' + ' - is not a right number')
+         else:                                       # if inputing is right so end method
+             break
+     return getTempNumber # returning our number 
+
+def greateCommon(numbers):# method for finding Greatest Common Divisor
+    i=1
+    while i < number_mounts:
+        a1 = a = int(numbers[i])
+        b1=b = int(numbers[i-1])
+        while a != 0 and b != 0:
+         if a > b:
+            a %= b
+         else:
+            b %= a
+        gcd = a + b
+        print("GCD(",a1,",",b1,") =",gcd)
+        i+=1
+
+print("enter mount numbers = ")
+number_mounts = getNumber()
 
 print("Enter range of numbers")
-
-while True:
-      f_r = input("First number = ")
-      try:
-            first_number = int(f_r)
-            break
-      except ValueError:
-            try:
-                  float(f_r)
-                  print("Entered number is float type. PLEASE ENTER CORRECT DATAS")
-            except ValueError:
-                  print("VALUE ERROR PLEASE ENTER CORRECT DATAS")
-
-while True:
-      s_r = input("Second number = ")
-      try:
-            second_number = int(s_r)
-            break
-      except ValueError:
-            try:
-                  float(s_r)
-                  print("Entered number is float type. PLEASE ENTER CORRECT DATAS")
-            except ValueError:
-                  print("VALUE ERROR PLEASE ENTER CORRECT DATAS")
+print("Enter first num = ")
+first_number = getNumber()
+print("Enter second num = ")
+second_number = getNumber()
 
 
 numbers = [0] * number_mounts
@@ -57,20 +52,4 @@ print("Our list =" , numbers)
 
 
 i=1
-def GreateCommon(numbers):
-    i=1
-    while i < number_mounts:
-        a1 = a = int(numbers[i])
-        b1=b = int(numbers[i-1])
-        while a != 0 and b != 0:
-         if a > b:
-            a %= b
-         else:
-            b %= a
-        gcd = a + b
-        print("GCD(",a1,",",b1,") =",gcd)
-        i+=1
-
-i=1
-GreateCommon(numbers)
-print("-------------------QUESTION #2--------------------")
+greateCommon(numbers)
