@@ -1,13 +1,13 @@
-def getNumber():     # inputing and ckecking number method
+def getNumber():
      while type:
-         getTempNumber=input()                      # inputing
-         try:                                        # checking if all is right
+         getTempNumber=input()
+         try:
              getTempNumber=int(getTempNumber)
-         except ValueError:                          # checking if input is not a number
+         except ValueError:
              print('"'+  getTempNumber + '"' + ' - is not a right number')
-         else:                                       # if inputing is right so end method
+         else:
              break
-     return getTempNumber # returning our number 
+     return getTempNumber
 
 def move(numbers, k):
     result = []
@@ -36,11 +36,8 @@ while i<n:
     arr[i]=temp
     i+=1
 print("Our array =",arr)
-     
-#test = [-2,5,6,-3,-4,3,-1]
-#print(test)
-#print(move(test,2))
 
 print("Inpur K =")
 k= getNumber()
-print(move(arr,k))
+arr = move(arr,k)
+print(arr)
