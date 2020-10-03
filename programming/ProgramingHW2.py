@@ -38,7 +38,7 @@ def binary_search(arr, find):
     lowwer = 0
     midle = len(arr) // 2
     upper = len(arr) - 1
-    print("Search in [", lowwer, "," , upper, "]","Midle element =",arr[midle])
+    print("Search in[", lowwer, "," , upper, "]","Midle element =",arr[midle])
     while arr[midle] != find and lowwer <= upper:
         if find > arr[midle]:
             lowwer = midle + 1
