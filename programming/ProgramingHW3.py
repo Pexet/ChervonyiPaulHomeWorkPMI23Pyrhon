@@ -10,21 +10,26 @@ def getNumber():
              break
      return getTempNumber
 
-def outMatrix(matr):
+def createFillMatrix(n):
+    matr=[[0]*n for i in range(n)]
+    i=0
+    j=0
+    for i in range(n):
+        for j in range(n):
+           if ((i<=j) and (i+j<n)) or ((i>=j)and(i+j>=n-1)):
+                matr[i][j]=1
+
     for row in matr: #output matrix n*n
-        print(' '.join([str(elem) for elem in row]))
+        print(' '.join([str(elem) for elem in row]))            
 
-print("Enter N for square matrix =")
-n = getNumber()
-
-a=[[0]*n for i in range(n)] #matrix n*n
-
-#for row in a: #output matrix n*n
-#    print(' '.join([str(elem) for elem in row]))
-i=0
-j=0
-for i in range(n):
-    for j in range(n):
-        if ((i<=j) and (i+j<n)) or ((i>=j)and(i+j>=n-1)):
-            a[i][j]=1
-outMatrix(a)
+while True:
+    print("Enter 1 or 2 \n1 - Start program \n2 - Exit program")
+    chos = getNumber()
+    if chos==1:
+        print("Enter N for square matrix =")
+        n = getNumber()
+        a = createFillMatrix(n)
+    elif chos==2:
+        break
+    else:
+        print("Something went wrong! Try again")
