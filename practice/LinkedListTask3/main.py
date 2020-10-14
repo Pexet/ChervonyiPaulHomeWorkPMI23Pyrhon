@@ -37,7 +37,11 @@ def fillList(list):
         num=getNumber()
         list.append(num)
     
-    print("Our array =",arr)
+    print("Our array =",list)
+    print("Inpur K =")
+    k= getNumber()
+    list=move(list,k)
+    print("Result = ",list)
    
 def fillListRandom(list):
     print("Mount of numbers in array =")
@@ -55,7 +59,11 @@ def fillListRandom(list):
         num = random.randint(loww, high)
         list.append(num)
     
-    print("Our array =",arr)
+    print("Our array =",list)
+    print("Inpur K =")
+    k= getNumber()
+    list=move(list,k)
+    print("Result = ",list)
 #------------------------------------------
 
 while True:
@@ -64,16 +72,8 @@ while True:
     arr = LinkedList()
     if chos==1: 
         fillList(arr)
-        print("Inpur K =")
-        k= getNumber()
-        arr=move(arr,k)
-        print("Result = ",arr)
     elif chos==2:
         fillListRandom(arr)
-        print("Inpur K =")
-        k= getNumber()
-        arr=move(arr,k)
-        print("Result = ",arr)
     elif chos==3:
         break
     else:
