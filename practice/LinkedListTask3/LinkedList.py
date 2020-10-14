@@ -3,7 +3,6 @@ class Node:
         self.data = data
         self.next = None
 
-# Linked List implementation
 class LinkedList:
     def __init__(self, lst=None):
         self.__head = None
@@ -22,9 +21,7 @@ class LinkedList:
             currentNode = currentNode.next
         return listStr + ']'
 
-    # getitem + getslice implementation
     def __getitem__(self, key):
-        #getslice
         if (isinstance(key, slice)):
             begin, end, step = key.indices(len(self))
             self.__checkIndex(begin)
@@ -45,19 +42,17 @@ class LinkedList:
             currentNode = currentNode.next
             i += 1
 
-    # setitem + setslice implementation
-    def __setitem__(self, key, value):
-        # setslice
+    def __setitem__(self, key, val):
         if (isinstance(key, slice)):
             begin, end, step = key.indices(len(self))
             self.__checkIndex(begin)
 
-            if (isinstance(value, (LinkedList, list))):
+            if (isinstance(val, (LinkedList, list))):
                 i = j = 0
                 currentNode = self.__head  
                 while currentNode is not None:
                     if (i in range(begin, end, step)): 
-                        currentNode.data = value[j]
+                        currentNode.data = val[j]
                         j += 1
                     currentNode = currentNode.next
                     i += 1
@@ -65,7 +60,7 @@ class LinkedList:
                 currentNode, i = self.__head, 0    
                 while currentNode is not None:
                     if (i in range(begin, end, step)): 
-                        currentNode.data = value
+                        currentNode.data = val
                     currentNode = currentNode.next
                     i += 1
                 
@@ -74,11 +69,10 @@ class LinkedList:
         self.__checkIndex(key)
         currentNode, i = self.__head, 0
         while currentNode is not None:
-            if (i == key): currentNode.data = value
+            if (i == key): currentNode.data = val
             currentNode = currentNode.next
             i += 1
     
-    # Private method to check whether the key is out of List range
     def __checkIndex(self, key):
         if (key >= self.__length): 
             raise IndexError('LinkedList index out of range')
@@ -92,12 +86,3 @@ class LinkedList:
                 currentNode = currentNode.next
             currentNode.next = Node(data)
         self.__length += 1
-
-    def copy(self):
-        copy = LinkedList()
-        currentNode = self.__head
-        while currentNode is not None:
-            copy.append(currentNode.data)
-            currentNode = currentNode.next
-
-        return copy
