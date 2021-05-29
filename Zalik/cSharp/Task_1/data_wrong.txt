@@ -1,5 +1,0 @@
-124;04.04.2020;10:00;15:00;http://stackoverflow.com;Max Patramanskii;Dima Balabukh
-125;05.05.2022;11:00;12:00;http://stackoverflow.com;Anna1 Step;Vika Mat
-123;03.03.2022;15:00;19:00;stackoverflow.com;Vanya Vyz;Oleksii Zarech
-122;02.02.2022;16:00;15:00;http://stackoverflow.com;Artur Bondar;Sophia Shuvar
-121;01.01.2022;17:00;18:00;http://stackoverflow.com;Paul Red;Yura Kis
