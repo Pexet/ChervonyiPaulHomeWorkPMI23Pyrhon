@@ -1,0 +1,14 @@
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\bin\Debug\Task_1.exe.config
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\bin\Debug\Task_1.exe
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\bin\Debug\Task_1.pdb
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\obj\Debug\Task_1.csprojAssemblyReference.cache
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\obj\Debug\Task_1.csproj.CoreCompileInputs.cache
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\obj\Debug\Task_1.exe
+D:\Python 2 course\csharp2grade\Ponomarenko_pmi25\c#_practice\c#_task_1\Task_1\obj\Debug\Task_1.pdb
+D:\ІІ курс\c#_task_1\Task_1\bin\Debug\Task_1.exe.config
+D:\ІІ курс\c#_task_1\Task_1\bin\Debug\Task_1.exe
+D:\ІІ курс\c#_task_1\Task_1\bin\Debug\Task_1.pdb
+D:\ІІ курс\c#_task_1\Task_1\obj\Debug\Task_1.csprojAssemblyReference.cache
+D:\ІІ курс\c#_task_1\Task_1\obj\Debug\Task_1.csproj.CoreCompileInputs.cache
+D:\ІІ курс\c#_task_1\Task_1\obj\Debug\Task_1.exe
+D:\ІІ курс\c#_task_1\Task_1\obj\Debug\Task_1.pdb
